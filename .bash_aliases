@@ -10,9 +10,7 @@ alias watch="watch --differences"
 alias irsshi="ssh benpicco.de -t bash -ic 'screen\ -rd\ irc'"
 
 calc(){ awk "BEGIN{ print $* }" ;}
-mkcd(){ 
-	mkdir $1 ; cd $1
-}
+mkcd(){ mkdir $1 ; cd $1 ;}
 
 extract () {
         if [ -f $1 ] ; then
@@ -40,3 +38,4 @@ extract () {
 
 shopt -s cdspell
 
+alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'
